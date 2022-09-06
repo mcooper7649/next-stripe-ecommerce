@@ -27,8 +27,8 @@ a {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
-  margin: 6px 18px;
+  justify-content: space-around;
+  margin: -75px 18px;
   position: relative;
 }
 .marquee-text {
@@ -68,8 +68,10 @@ span.text-red {
   margin-left: 6px;
 }
 .logo {
-  color: gray;
-  font-size: 18px;
+  position: relative;
+
+  /* color: gray; */
+  /* font-size: 18px; */
 }
 .cart-icon {
   font-size: 25px;
