@@ -25,6 +25,10 @@ const Cart = () => {
   } = useStateContext();
 
   const handleCheckout = async () => {
+    if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+      toast.success('Demo store: checkout is disabled, no payment taken.');
+      return;
+    }
     const stripe = await getStripe();
 
     const response = await fetch('/api/stripe', {
